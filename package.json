@@ -15,6 +15,11 @@
     "type": "git",
     "url": "git+https://github.com/nadavoran/Pini.git"
   },
+  "files": [
+    "src",
+    "index.js",
+    "LICENSE-MIT"
+  ],
   "author": "Nadav Oran",
   "license": "MIT",
   "bugs": {
