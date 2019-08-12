@@ -24,34 +24,34 @@ describe('Create Player', () => {
     });
     describe("add cards", () => {
         beforeEach(() => {
-            this.player.addCard(new Card("A", "d"), 0);
+            this.player.addCard(new Card("A", "diams"), 0);
         })
         it("should add card to first hand", ()=>{
             expect(this.player.hands[0].count).toBe(1);
         });
         it("should prevent from adding 2 cards to first hand", () => {
-            this.player.addCard(new Card("A", "c"), 0);
+            this.player.addCard(new Card("A", "clubs"), 0);
             expect(this.player.hands[0].count).not.toBe(2);
         });
         it("should prevent from adding 2 cards to first hand", () => {
-            expect(this.player.addCard(new Card("A", "c"), 0)).toBeFalsy();
+            expect(this.player.addCard(new Card("A", "clubs"), 0)).toBeFalsy();
             expect(this.player.round).toBe(1);
         });
         describe("add 5 cards", ()=>{
             it("should add to each hand and promote round", () => {
-                this.player.addCard(new Card("A", "c"), 0);
-                this.player.addCard(new Card("T", "c"), 1);
-                this.player.addCard(new Card("9", "c"), 2);
-                this.player.addCard(new Card("8", "c"), 3);
-                this.player.addCard(new Card("7", "c"), 4);
+                this.player.addCard(new Card("A", "clubs"), 0);
+                this.player.addCard(new Card("10", "clubs"), 1);
+                this.player.addCard(new Card("9", "clubs"), 2);
+                this.player.addCard(new Card("8", "clubs"), 3);
+                this.player.addCard(new Card("7", "clubs"), 4);
                 expect(this.player.round).toBe(2);
             });
             it("should not promote round if 2 cards go to same hands ", () => {
-                this.player.addCard(new Card("A", "c"), 0);
-                this.player.addCard(new Card("T", "c"), 1);
-                this.player.addCard(new Card("9", "c"), 2);
-                this.player.addCard(new Card("8", "c"), 3);
-                this.player.addCard(new Card("7", "c"), 0);
+                this.player.addCard(new Card("A", "clubs"), 0);
+                this.player.addCard(new Card("10", "clubs"), 1);
+                this.player.addCard(new Card("9", "clubs"), 2);
+                this.player.addCard(new Card("8", "clubs"), 3);
+                this.player.addCard(new Card("7", "clubs"), 0);
                 expect(this.player.round).not.toBe(2);
             });
         });

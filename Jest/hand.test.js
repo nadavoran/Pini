@@ -37,7 +37,7 @@ describe('Create Hand', () => {
             expect(this.hand.count).toBe(5);
         });
         it("should prevent adding more than 5", ()=>{
-            expect(this.hand.addCard(new Card("A", "d"))).toBeFalsy();
+            expect(this.hand.addCard(new Card("A", "diams"))).toBeFalsy();
         })
     });
     describe("resolve hand", () => {
@@ -50,11 +50,11 @@ describe('Create Hand', () => {
         });
         it("should be Two Pair", () => {
             // 'Ad', 'As', 'Jc', 'Th', '2d', 'Qs', 'Qd']
-            this.hand.addCard(new Card("A","d"));
-            this.hand.addCard(new Card("A","s"));
-            this.hand.addCard(new Card("Q","s"));
-            this.hand.addCard(new Card("T","h"));
-            this.hand.addCard(new Card("Q","d"));
+            this.hand.addCard(new Card("A","diams"));
+            this.hand.addCard(new Card("A","spades"));
+            this.hand.addCard(new Card("Q","spades"));
+            this.hand.addCard(new Card("10","hearts"));
+            this.hand.addCard(new Card("Q","diams"));
             expect(this.hand.solved.name).toBe("Two Pair");
         });
     });
