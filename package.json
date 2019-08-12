@@ -1,0 +1,24 @@
+{
+  "name": "pini",
+  "version": "1.0.0",
+  "description": "Card Game",
+  "main": "index.js",
+  "dependencies": {
+    "jest": "^24.8.0",
+    "pokersolver": "^2.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nadavoran/Pini.git"
+  },
+  "author": "Nadav Oran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nadavoran/Pini/issues"
+  },
+  "homepage": "https://github.com/nadavoran/Pini#readme"
+}
