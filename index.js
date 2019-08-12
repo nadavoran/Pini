@@ -1,12 +1,12 @@
-const { Board } = require('./Board');
-const { Player } = require('./Player');
-const { Hand } = require('./Hand');
-const CardData = require('./Card');
+const { Board } = require('./src/Board');
+const { Player } = require('./src/Player');
+const { Hand } = require('./src/Hand');
+const CardData = require('./src/Card');
 
-export { default as Board } from './Board';
-export { default as Player } from './Player';
-export { default as Hand } from './Hand';
-export { default as CardData } from './Card';
+export { default as Board } from './src/Board';
+export { default as Player } from './src/Player';
+export { default as Hand } from './src/Hand';
+export { default as CardData } from './src/Card';
 
 
 
