@@ -1,5 +1,9 @@
-function sum(a, b) {
-    return a + b;
-}
+const { Board } = require('./Board');
+const { Player } = require('./Player');
+const { Hand } = require('./Hand');
+const CardData = require('./Card');
 
-module.exports = sum;
+
+module.exports = {
+    Board, Player, Hand, CardData
+};
