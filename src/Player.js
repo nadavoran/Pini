@@ -16,9 +16,9 @@ class Player{
 
     addCard(card, handIndex){
         let hand = this.hands[handIndex];
-        if (hand.count < this.round){
-            hand.addCard(card);
+        if (hand.count < this.round && hand.addCard(card)){
             this.roundUp();
+            return true;
         }
     }
 
