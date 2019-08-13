@@ -2,16 +2,16 @@ const SolveHand = require('pokersolver').Hand;
 
 class Hand{
     constructor(){
-        this.cards = [];
+        this.cards = new Set();
     }
 
     addCard(card){
-        if (this.cards.length < 5) {
-            return this.cards.push(card);
+        if (this.cards.size < 5) {
+            return this.cards.add(card);
         }
     }
     get count(){
-        return this.cards.length;
+        return this.cards.size;
     }
 
     get solved(){
@@ -19,9 +19,11 @@ class Hand{
             if (this.count < 5){
                 return {name: `missing ${5 - this.count}`};
             }
-            this.solve = SolveHand.solve(this.cards.map(card=>{
-                return card.value + card.type;
-            }));
+            let mappedValues = [];
+            this.cards.forEach(card => {
+                mappedValues.push(card.value + card.type);
+            })
+            this.solve = SolveHand.solve(mappedValues);
         }
         return this.solve;
     }

@@ -4,10 +4,12 @@
   "description": "Card Game",
   "main": "index.js",
   "dependencies": {
-    "jest": "^24.8.0",
     "pokersolver": "^2.1.3"
   },
-  "devDependencies": {},
+  "bundleDependencies": [],
+  "devDependencies": {
+    "jest": "^24.8.0"
+  },
   "scripts": {
     "test": "jest"
   },

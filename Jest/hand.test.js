@@ -26,6 +26,12 @@ describe('Create Hand', () => {
             this.hand.addCard(this.card);
             expect(this.hand.count).toBe(1);
         });
+        it("should ignore duplicate cards", () => {
+            this.hand.addCard(this.card);
+            this.hand.addCard(this.card);
+            expect(this.hand.count).toBe(1);
+
+        })
     });
     describe("hand with 5 cards", () => {
         beforeEach(() => {
