@@ -21,6 +21,9 @@ class Board{
         }
         return p1Count > 0 ? 1 : -1;
     }
+    gameEnded(){
+        return this.player1.round === 6 && this.player2.round === 6;
+    }
 }
 
 module.exports = { Board }  

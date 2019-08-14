@@ -15,7 +15,7 @@ describe('Create card', () => {
             expect(this.card.toString()).toBe("10d");
         });
         it("should be red", () => {
-            expect(this.card.color).toBe("r");
+            expect(this.card.color).toBe("red");
         });
     });
 });
